@@ -1,0 +1,15 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+supabase==2.10.0
+python-dotenv==1.0.1
+pydantic>=2.11.0
+python-jose[cryptography]==3.3.0
+
+# RAG dependencies
+qdrant-client==1.12.1
+cohere==5.13.3
+groq==0.13.1
+llama-index==0.12.3
+llama-index-readers-file==0.4.2
+inngest>=0.5.13
+python-multipart==0.0.18
