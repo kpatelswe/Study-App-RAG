@@ -14,14 +14,7 @@ Transform your study sessions with an AI assistant that actually understands you
 - **💾 Auto-Save** - Never lose your work with automatic cloud persistence
 
 ## 🏗️ Architecture
-
-### Frontend (Next.js + React)
-- **Framework**: Next.js 16 with App Router
-- **UI**: Custom component library built on Radix UI + Tailwind CSS
-- **Whiteboarding**: Excalidraw for professional drawing capabilities
 - **Authentication**: Supabase Auth with JWT tokens
-
-### Backend (FastAPI + Python)
 - **API Framework**: FastAPI for high-performance REST endpoints
 - **AI/ML Stack**:
   - **Embeddings**: Cohere `embed-english-v3.0` (1024-dimensional vectors)
@@ -123,54 +116,11 @@ Visit `http://localhost:3000` to start studying!
   - *"How does method Z work according to our textbook?"*
 - The AI has read your exact course materials and can reference specific pages, examples, and approaches
 
-### 4. Interactive Learning
-- Draw while you study - the AI knows what you're learning
-- Ask follow-up questions for clarification
-- Get explanations tailored to your course's specific methodology
-
-## 🔧 Technical Details
-
-### RAG Pipeline
-1. **Document Ingestion**: PDFs are loaded and intelligently chunked (1000 chars + 200 overlap)
-2. **Embedding Generation**: Cohere creates 1024-dimensional vector representations
-3. **Vector Storage**: Qdrant indexes vectors for fast similarity search
-4. **Query Processing**: User questions are embedded and matched against document chunks
-5. **Answer Generation**: Groq's Llama model synthesizes answers using retrieved context
-
-### Asynchronous Processing
-- **Inngest Workflows**: Handle PDF processing and AI queries asynchronously
-- **Rate Limiting**: Prevents API abuse (2 uploads/min, 1 upload/4 hours per user)
-- **Error Handling**: Graceful fallbacks when services are unavailable
-
-### Security & Privacy
-- **Row Level Security**: Users can only access their own whiteboards and documents
-- **JWT Authentication**: Secure API access with Supabase Auth
-- **Data Isolation**: Complete separation between user data
-
-## 🎨 Features
-
-- **Real-time Collaboration**: Multiple users can work on whiteboards
-- **Rich Media Support**: Add images, links, and embedded content
-- **Auto-save**: Never lose progress with automatic persistence
-- **Responsive Design**: Works on desktop and mobile devices
-- **Dark/Light Mode**: Comfortable studying in any environment
-
-## 📖 API Documentation
-
 Once running, visit:
 - **Frontend**: http://localhost:3000
 - **Backend API**: http://localhost:8000/docs (Swagger UI)
 - **ReDoc**: http://localhost:8000/redoc
 
-## 🤝 Contributing
-
-This project demonstrates modern full-stack development with AI integration. Key technologies and patterns:
-
-- **Vector Databases** for semantic search
-- **RAG Architecture** for context-aware AI
-- **Event-Driven Processing** with Inngest
-- **Real-time Applications** with Next.js
-- **Secure API Design** with FastAPI
 
 ## 📄 License
 
